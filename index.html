@@ -12,6 +12,18 @@
       <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script>
+      function search()
+      {
+        var question = getElementById("question");
+        if (question != null && question != "")
+        {
+          document.location.href = "https://baike.baidu.com/item/" + question;
+        } else {
+          alert("您提交的信息不符合要求（不为空并有效）！请重新填写");
+        }
+      }
+    </script>
   </head>
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -24,6 +36,9 @@
             <span class="icon-bar"></span>
           </button>
           <b class="navbar-brand">Aurora_Sky's Blog</b>
+          <b class="navbar-brand">|</b>
+          <input class="navbar-brand" id="question" placeholder="Search...（百度百科）" />
+          <button class="btn-info" onclick="search()">搜索</button>
         </div>
       </div>
     </nav>
