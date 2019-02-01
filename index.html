@@ -15,10 +15,10 @@
     <script>
       function search()
       {
-        var question = getElementById("question");
-        if (question != "")
+        var question = getElementById("question").value;
+        if (question != null && question != "")
         {
-          document.location = "https://baike.baidu.com/item/" + question;
+          document.location.href = "https://baike.baidu.com/item/" + question;
         } else {
           alert("您提交的信息不符合要求（不为空并有效）！请重新填写");
         }
